@@ -1,5 +1,14 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  const newArray = []
+  const wordArray = word.split('')
+  wordArray.forEach(letter => newArray.unshift(letter))
+  const newWord = newArray.join('')
+  if (newWord === word){
+    return true
+  } else {
+    return false
+  }
 }
 
 /* 
@@ -8,6 +17,13 @@ function isPalindrome(word) {
 
 /*
   Add written explanation of your solution here
+  initialize newArray
+  convert string to wordArray
+  get wordArray length
+  loop through wordArray using forLoop
+    foreach letter, push to newArray using unshift (append to beginning) 
+  recreate string
+  compare to word
 */
 
 // You can run `node index.js` to view these console logs
